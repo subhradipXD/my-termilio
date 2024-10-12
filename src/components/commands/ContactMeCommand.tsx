@@ -7,7 +7,7 @@ const ContactMeCommand: React.FC = () => {
             <ul className="list-none pl-5">
                 <li>
                     <a href="mailto:subhradipdas6969@gmail.com" className="text-blue-500 hover:underline">
-                        subhradipdas6969@gmail.com
+                        email
                     </a>
                 </li>
                 <li>
