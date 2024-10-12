@@ -8,6 +8,7 @@ import EchoCommand from './commands/EchoCommand';
 import GUICommand from './commands/GUICommand';
 import PWDCommand from './commands/PWDCommand';
 import SkillCommand from './commands/SkillCommand';
+import ThemesCommand from './commands/ThemeCommand';
 
 interface Command {
     command: string;
@@ -27,6 +28,8 @@ const Terminal: React.FC = () => {
         const message = args.join(' ');
 
         switch (baseCommand.toLowerCase()) {
+            case '':
+                break;
             case 'help':
             case 'hlp':
                 response = <HelpCommand />;
@@ -61,10 +64,11 @@ const Terminal: React.FC = () => {
                 response = <PWDCommand />;
                 break;
             case 'skills':
-            case 'skill':
                 response = <SkillCommand />;
                 break;
-
+            case 'themes':
+                response = <ThemesCommand />;
+                break;
             default:
                 response = <p>Command not found. Type "help" for a list of commands.</p>;
         }
@@ -95,7 +99,7 @@ const Terminal: React.FC = () => {
     };
 
     return (
-        <div className="bg-black text-green-500 font-mono h-screen p-4">
+        <div className=" text-green-500 font-mono h-screen p-4">
             <div className="overflow-auto mb-4">
                 {output.map((entry, index) => (
                     <div key={index} className="mb-2">
@@ -114,7 +118,7 @@ const Terminal: React.FC = () => {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="bg-black text-green-500 focus:outline-none flex-grow"
+                    className="text-green-500 focus:outline-none flex-grow bg-black"
                     autoFocus
                 />
             </div>
