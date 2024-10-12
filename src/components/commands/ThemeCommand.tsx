@@ -16,7 +16,7 @@ const ThemesCommand: React.FC = () => {
             <div className='text-green-500 ms-5'>
                 <span className="">-----</span>
                 <p className="">for change theme enter: theme set {'<theme-name>'}</p>
-                <p className="">eg: theme set ubuntu</p>
+                <p className="">eg: theme ubuntu</p>
             </div>
         </div>
     );
