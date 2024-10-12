@@ -36,8 +36,7 @@ const EducationCommand: React.FC = () => {
                     <div key={index} className="flex flex-col space-y-1 ms-5">
                         <div className="font-bold text-green-500">{edu.institution}</div>
                         <span className="text-gray-400">{edu.duration}</span>
-                        <span className="text-gray-300">{edu.degree}</span>
-                        <span className="text-blue-400">{edu.score}</span>
+                        <span className="text-blue-400">{edu.degree}</span>
                     </div>
                 ))}
             </div>
