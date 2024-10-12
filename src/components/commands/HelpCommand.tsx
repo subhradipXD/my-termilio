@@ -28,7 +28,7 @@ const HelpCommand: React.FC = () => {
                 <span className='ms-10'>-----</span>
                 <div className=" grid grid-cols-4 gap-0">
                     <span className="text-green-400 animate-pulse ms-10">Up Arrow</span>
-                    <span className="text-green-500 me-auto">{'=>'} go back to previous command</span>
+                    <span className="text-green-500 me-auto">{'=>'} go back to previous commands</span>
                 </div>
             </div>
         </div>
