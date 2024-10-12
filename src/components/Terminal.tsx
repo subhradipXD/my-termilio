@@ -7,7 +7,6 @@ import EducationCommand from './commands/EducationCommand';
 import EchoCommand from './commands/EchoCommand';
 import GUICommand from './commands/GUICommand';
 import PWDCommand from './commands/PWDCommand';
-import Header from '../header/header';
 import SkillCommand from './commands/SkillCommand';
 
 interface Command {
@@ -47,9 +46,6 @@ const Terminal: React.FC = () => {
             case 'contact':
             case 'cnt':
                 response = <ContactMeCommand />;
-                break;
-            case 'hero':
-                response = <Header />;
                 break;
             case 'clear':
             case 'cls':

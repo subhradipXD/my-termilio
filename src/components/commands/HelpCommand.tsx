@@ -12,7 +12,6 @@ const HelpCommand: React.FC = () => {
         { command: 'projects/prj', description: 'my babies' },
         { command: 'pwd', description: 'current working directory' },
         // { command: 'theme', description: 'for available themes' },
-        { command: 'hero', description: 'for hero section' },
         { command: 'skill/skills', description: 'my skills' },
     ];
 
