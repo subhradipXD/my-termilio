@@ -11,7 +11,7 @@ const HelpCommand: React.FC = () => {
         { command: 'help/hlp', description: "you already know. don't you?" },
         { command: 'projects/prj', description: 'my shits' },
         { command: 'pwd', description: 'current working directory' },
-        { command: 'theme', description: 'for available themes' },
+        // { command: 'theme', description: 'for available themes' },
         { command: 'hero', description: 'for hero section' },
         { command: 'skill/skills', description: 'my skills' },
     ];
