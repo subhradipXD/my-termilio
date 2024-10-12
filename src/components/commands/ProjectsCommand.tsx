@@ -52,7 +52,7 @@ const ProjectsCommand: React.FC = () => {
 
     return (
         <div className='mt-2 ms-10'>
-            <p>Here are some of my projects:</p>
+            <p>here are some of my projects:</p>
             <div className="flex flex-col space-y-4 mt-2 ms-5">
                 {projects.map((project, index) => (
                     <div key={index} className="flex flex-col">

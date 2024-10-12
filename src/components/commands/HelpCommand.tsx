@@ -9,7 +9,7 @@ const HelpCommand: React.FC = () => {
         { command: 'education/edu', description: 'my education' },
         { command: 'gui', description: 'my other portfolio' },
         { command: 'help/hlp', description: "you already know. don't you?" },
-        { command: 'projects/prj', description: 'my shits' },
+        { command: 'projects/prj', description: 'my babies' },
         { command: 'pwd', description: 'current working directory' },
         // { command: 'theme', description: 'for available themes' },
         { command: 'hero', description: 'for hero section' },

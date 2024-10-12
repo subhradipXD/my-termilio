@@ -30,7 +30,7 @@ const EducationCommand: React.FC = () => {
 
     return (
         <div className='ms-10 mt-2'>
-            <p>My Education:</p>
+            <p>my education:</p>
             <div className="flex flex-col space-y-4 mt-2">
                 {educationDetails.map((edu, index) => (
                     <div key={index} className="flex flex-col space-y-1 ms-5">
