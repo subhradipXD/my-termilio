@@ -9,6 +9,7 @@ import GUICommand from './commands/GUICommand';
 import PWDCommand from './commands/PWDCommand';
 import SkillCommand from './commands/SkillCommand';
 import ThemesCommand from './commands/ThemeCommand';
+import { useTheme } from '../context/ThemeContext';
 
 interface Command {
     command: string;
@@ -20,6 +21,8 @@ const Terminal: React.FC = () => {
     const [output, setOutput] = useState<Command[]>([]);
     const [history, setHistory] = useState<string[]>([]);
     const [historyIndex, setHistoryIndex] = useState<number>(-1);
+
+    const { themeMode, darkTheme, lightTheme, greenGoblinTheme, ubuntuTheme } = useTheme();
 
     const handleCommand = (command: string) => {
         let response: JSX.Element;
@@ -69,8 +72,34 @@ const Terminal: React.FC = () => {
             case 'themes':
                 response = <ThemesCommand />;
                 break;
+            case 'theme':
+                switch (message.toLowerCase()) {
+                    case 'dark':
+                        if (themeMode !== 'dark') {
+                            darkTheme();
+                        }
+                        break;
+                    case 'light':
+                        if (themeMode !== 'light') {
+                            lightTheme();
+                        }
+                        break;
+                    case 'green-goblin':
+                        if (themeMode !== 'green-goblin') {
+                            greenGoblinTheme();
+                        }
+                        break;
+                    case 'ubuntu':
+                        if (themeMode !== 'ubuntu') {
+                            ubuntuTheme();
+                        }
+                        break;
+                    default:
+                        response = <p className='mt-2 ms-10'>No such theme available. Enter "themes" for a list of themes.</p>;
+                }
+                break;
             default:
-                response = <p>Command not found. Type "help" for a list of commands.</p>;
+                response = <p className='mt-2 ms-10'>Command not found. Enter "help" for a list of commands.</p>;
         }
 
         setOutput((prevOutput) => [...prevOutput, { command, output: response }]);
@@ -84,14 +113,14 @@ const Terminal: React.FC = () => {
             setInput('');
         } else if (e.key === 'ArrowUp') {
             if (historyIndex < history.length - 1) {
-                setHistoryIndex((prevIndex) => prevIndex + 1);
+                setHistoryIndex((prev) => prev + 1);
                 setInput(history[history.length - 1 - (historyIndex + 1)]);
             }
         } else if (e.key === 'ArrowDown') {
             if (historyIndex > 0) {
-                setHistoryIndex((prevIndex) => prevIndex - 1);
+                setHistoryIndex((prev) => prev - 1);
                 setInput(history[history.length - 1 - (historyIndex - 1)]);
-            } else if (historyIndex === 0) {
+            } else {
                 setHistoryIndex(-1);
                 setInput('');
             }
@@ -99,7 +128,7 @@ const Terminal: React.FC = () => {
     };
 
     return (
-        <div className=" text-green-500 font-mono h-screen p-4">
+        <div className=" text-green-700 font-mono h-screen p-4">
             <div className="overflow-auto mb-4">
                 {output.map((entry, index) => (
                     <div key={index} className="mb-2">
@@ -118,12 +147,17 @@ const Terminal: React.FC = () => {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="text-green-500 focus:outline-none flex-grow bg-black"
+                    className="text-green-700 focus:outline-none flex-grow bg-transparent"
                     autoFocus
                 />
             </div>
         </div>
+
+
     );
 };
 
 export default Terminal;
+
+
+

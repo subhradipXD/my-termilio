@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ThemesCommand: React.FC = () => {
-    const themes = ['light', 'dark', 'green-Goblin', 'ubuntu'];
+    const themes = ['light', 'dark', 'green-goblin', 'ubuntu'];
 
     return (
         <div className="mt-2 ms-10">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTheme } from '../../context/ThemeContext'; // Make sure to import the hook
 
 const ProjectsCommand: React.FC = () => {
     const projects = [
@@ -20,7 +21,7 @@ const ProjectsCommand: React.FC = () => {
         {
             name: 'NUXBUY',
             repo: 'https://github.com/subhradipXD/NUXBUY',
-            description: 'An online store using react.js, tailwind css, firebase, fake store api. '
+            description: 'An online store using react.js, tailwind css, firebase, fake store api.'
         },
         {
             name: 'tic-tac-toe',
@@ -35,7 +36,7 @@ const ProjectsCommand: React.FC = () => {
         {
             name: 'FundWise',
             repo: 'https://github.com/subhradipXD/FundWise',
-            description: 'A responsive website for make a communication channel between entrepreneur and investor, to help entrepreneurs make their business grow.'
+            description: 'A responsive website to make a communication channel between entrepreneur and investor, to help entrepreneurs make their business grow.'
         },
         {
             name: 'Task-Master',
@@ -43,31 +44,38 @@ const ProjectsCommand: React.FC = () => {
             description: 'A simple todo list application using react.js, bootstrap, mongodb.'
         },
         {
-            name: 'GUI Porfolio',
+            name: 'GUI Portfolio',
             repo: 'https://github.com/subhradipXD/portfolio',
-            description: 'My gui portfolio using react.js, tailwind css, framer motion.'
+            description: 'My GUI portfolio using react.js, tailwind css, framer motion.'
         },
         // Add more projects as needed
     ];
 
+    const { themeMode } = useTheme(); // Get the current theme mode
+
+    // Determine text colors based on the theme mode
+    const nameColor = themeMode === 'light' ? 'text-black' : 'text-green-500';
+    const repoColor = themeMode === 'light' ? 'text-blue-600' : 'text-blue-400'; // Darker blue for light theme
+    const descriptionColor = themeMode === 'light' ? 'text-gray-800' : 'text-white'; // Darker gray for light theme
+
     return (
         <div className='mt-2 ms-10 w-1/2'>
-            <p>here are some of my projects:</p>
+            <p>Here are some of my projects:</p>
             <div className="flex flex-col space-y-4 mt-2 ms-5">
                 {projects.map((project, index) => (
                     <div key={index} className="flex flex-col">
                         <div className="flex">
-                            <span className="font-bold text-green-500">{project.name}:</span>
+                            <span className={`font-bold ${nameColor}`}>{project.name}:</span>
                             <a
                                 href={project.repo}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-blue-400 underline ms-5"
+                                className={`${repoColor} underline ms-5`}
                             >
                                 GitHub Repo
                             </a>
                         </div>
-                        <p className="text-white">{project.description}</p>
+                        <p className={descriptionColor}>{project.description}</p>
                     </div>
                 ))}
             </div>
