@@ -9,7 +9,7 @@ interface ThemeContextType {
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-    themeMode: "dark",
+    themeMode: "light",
     darkTheme: () => { },
     lightTheme: () => { },
     greenGoblinTheme: () => { },
@@ -17,7 +17,7 @@ const ThemeContext = createContext<ThemeContextType>({
 });
 
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [themeMode, setThemeMode] = useState<string>("green-goblin");
+    const [themeMode, setThemeMode] = useState<string>("light");
 
     const darkTheme = () => {
         setThemeMode("dark");
