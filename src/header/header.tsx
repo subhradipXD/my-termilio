@@ -22,7 +22,7 @@ __ |/ |/ / /  __/  / / /__ / /_/ /  / / / / /  __/
 ____/|__/  \\___//_/  \\___/ \\____//_/ /_/ /_/\\___/
         `}
             </pre> */}
-            <pre>Welcome to my terminal portfolio. (version 1.8.5)</pre>
+            <pre>Welcome to my terminal portfolio. (version 1.9.8)</pre>
             <pre>-----</pre>
             <pre className="font-mono text-sm">
                 for list of commands enter{' '}
