@@ -134,7 +134,7 @@ const Terminal: React.FC = () => {
                     <div key={index} className="mb-2">
                         <p>
                             <span className="pr-2 text-orange-600 text-lg font-vt323">visitor@terminal.subhradipXD:~$</span>
-                            {entry.command}
+                            <span className='text-yellow-500'>{entry.command}</span>
                         </p>
                         {entry.output}
                     </div>
@@ -147,7 +147,7 @@ const Terminal: React.FC = () => {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="focus:outline-none flex-grow bg-transparent text-lg font-vt323"
+                    className="focus:outline-none flex-grow bg-transparent text-lg font-vt323 text-yellow-500"
                     autoFocus
                 />
             </div>
