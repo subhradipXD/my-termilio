@@ -128,12 +128,12 @@ const Terminal: React.FC = () => {
     };
 
     return (
-        <div className=" text-green-700 font-mono h-screen p-4">
+        <div className="font-mono h-screen p-4">
             <div className="overflow-auto mb-4">
                 {output.map((entry, index) => (
                     <div key={index} className="mb-2">
                         <p>
-                            <span className="pr-2">visitor@terminal.subhradipXD:~$</span>
+                            <span className="pr-2 text-orange-600">visitor@terminal.subhradipXD:~$</span>
                             {entry.command}
                         </p>
                         {entry.output}
@@ -141,13 +141,13 @@ const Terminal: React.FC = () => {
                 ))}
             </div>
             <div className="flex items-center">
-                <span className="pr-2">visitor@terminal.subhradipXD:~$</span>
+                <span className="pr-2 text-orange-600">visitor@terminal.subhradipXD:~$</span>
                 <input
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="text-green-700 focus:outline-none flex-grow bg-transparent"
+                    className="focus:outline-none flex-grow bg-transparent"
                     autoFocus
                 />
             </div>

@@ -22,7 +22,7 @@ const PreLoader: React.FC = () => {
                 {messages.map((message, index) => (
                     <motion.p
                         key={index}
-                        className="text-green-500 font-mono text-lg"
+                        className="text-green-700 font-mono text-lg"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: messageIndex === index ? 1 : 0, y: messageIndex === index ? 0 : 20 }}
                         transition={{ duration: 0.6 }}

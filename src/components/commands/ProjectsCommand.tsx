@@ -72,7 +72,7 @@ const ProjectsCommand: React.FC = () => {
                                 rel="noopener noreferrer"
                                 className={`${repoColor} underline ms-5`}
                             >
-                                GitHub Repo
+                                gitHub repo
                             </a>
                         </div>
                         <p className={descriptionColor}>{project.description}</p>

@@ -21,14 +21,14 @@ const HelpCommand: React.FC = () => {
             <div className="ms-5 mt-2 flex flex-col space-y-2">
                 {commands.map(({ command, description }, index) => (
                     <div key={index} className="grid grid-cols-4 gap-0">
-                        <span className="text-dark-green animate-pulse ms-10">{command}</span>
-                        <span className="text-green-700 me-auto">- {description}</span>
+                        <span className="ms-10">{command}</span>
+                        <span className=" me-auto">- {description}</span>
                     </div>
                 ))}
                 <span className='ms-10'>-----</span>
                 <div className="grid grid-cols-4 gap-0">
-                    <span className="text-dark-green animate-pulse ms-10">Up Arrow</span>
-                    <span className="text-green-700 me-auto">{'=>'} go back to previous commands</span>
+                    <span className="ms-10">Up Arrow</span>
+                    <span className="me-auto">{'=>'} go back to previous commands</span>
                 </div>
             </div>
         </div>

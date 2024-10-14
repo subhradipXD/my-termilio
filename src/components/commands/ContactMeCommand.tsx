@@ -12,17 +12,17 @@ const ContactMeCommand: React.FC = () => {
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/subhradip-das-2000s69/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-                        LinkedIn
+                        linkedIn
                     </a>
                 </li>
                 <li>
                     <a href="https://github.com/subhradipXD" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-                        GitHub
+                        gitHub
                     </a>
                 </li>
                 <li>
                     <a href="https://wa.me/9635760319" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-                        WhatsApp
+                        whatsApp
                     </a>
                 </li>
             </ul>

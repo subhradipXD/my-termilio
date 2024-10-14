@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header: React.FC = () => {
     return (
-        <div className="ms-5 font-mono text-sm leading-tight whitespace-pre text-green-700">
+        <div className="ms-5 font-mono text-sm leading-tight whitespace-pre">
             <pre>
                 {`
 ██╗  ██╗███████╗██╗   ██╗    ████████╗██╗  ██╗███████╗██████╗ ███████╗
@@ -25,8 +25,7 @@ ____/|__/  \\___//_/  \\___/ \\____//_/ /_/ /_/\\___/
             <pre>Welcome to my terminal portfolio. (version 1.9.8)</pre>
             <pre>-----</pre>
             <pre className="font-mono text-sm">
-                for list of commands enter{' '}
-                <span className="text-dark-green animate-pulse">help/hlp</span>.
+                for list of commands enter help/hlp.
             </pre>
             <pre>-----</pre>
         </div>

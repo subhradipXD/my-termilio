@@ -15,7 +15,6 @@ export default {
         'green-goblin-text': '#4caf50',
         'ubuntu-bg': '#300a24',
         'ubuntu-text': '#dd4814',
-        'dark-green': '#006400',
       },
     },
   },

@@ -38,7 +38,7 @@ const MainContent: React.FC<{ isMobile: boolean; isLoading: boolean; }> = ({ isM
 
   if (isMobile) {
     return (
-      <div className="text-center p-5 mt-5 text-green-600">
+      <div className="text-center p-5 mt-5 text-green-700">
         <h1 className="text-xl font-bold">Mobile devices are not supported.</h1>
         <p>Please visit this site on a larger screen or use Desktop site.</p>
       </div>

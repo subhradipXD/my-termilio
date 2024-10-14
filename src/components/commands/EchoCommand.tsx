@@ -8,7 +8,7 @@ const EchoCommand: React.FC<EchoCommandProps> = ({ message }) => {
     return (
         <>
             <div className="ms-5 mt-2">
-                <p className="text-dark-green ms-5">
+                <p className="ms-5">
                     {message}
                 </p>
             </div>
