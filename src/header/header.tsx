@@ -3,7 +3,7 @@ import React from 'react';
 const Header: React.FC = () => {
     return (
         <div className="ms-5 leading-tight whitespace-pre">
-            <pre>
+            <pre className='text-sm'>
                 {/* {`
 ██╗  ██╗███████╗██╗   ██╗     █████╗ ██╗     ██╗███████╗███╗   ██╗
 ██║  ██║██╔════╝╚██╗ ██╔╝    ██╔══██╗██║     ██║██╔════╝████╗  ██║
