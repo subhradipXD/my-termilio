@@ -16,7 +16,7 @@ const HelpCommand: React.FC = () => {
     ];
 
     return (
-        <div className='ms-5'>
+        <div className='ms-5 text-lg font-vt323'>
             <p className='mt-2'>available commands:</p>
             <div className="ms-5 mt-2 flex flex-col space-y-2">
                 {commands.map(({ command, description }, index) => (

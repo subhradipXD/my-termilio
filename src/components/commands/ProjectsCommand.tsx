@@ -59,7 +59,7 @@ const ProjectsCommand: React.FC = () => {
     const descriptionColor = themeMode === 'light' ? 'text-gray-800' : 'text-white'; // Darker gray for light theme
 
     return (
-        <div className='mt-2 ms-10 w-1/2'>
+        <div className='mt-2 ms-10 w-1/2 text-lg font-vt323'>
             <p>Here are some of my projects:</p>
             <div className="flex flex-col space-y-4 mt-2 ms-5">
                 {projects.map((project, index) => (

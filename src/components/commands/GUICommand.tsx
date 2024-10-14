@@ -7,7 +7,7 @@ const GUICommand: React.FC = () => {
     const guiColor = themeMode === 'light' ? 'text-blue-600' : 'text-blue-400'; // Darker blue for light theme
 
     return (
-        <div className='ms-5 mt-2'>
+        <div className='ms-5 mt-2 text-lg font-vt323'>
             <p className="ms-5">
                 visit my other portfolio:
                 <a

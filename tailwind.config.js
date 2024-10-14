@@ -16,6 +16,9 @@ export default {
         'ubuntu-bg': '#300a24',
         'ubuntu-text': '#dd4814',
       },
+      fontFamily: {
+        'vt323': ['VT323', 'monospace'],  // Add VT323 font
+      },
     },
   },
   plugins: [],

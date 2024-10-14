@@ -36,7 +36,7 @@ const EducationCommand: React.FC = () => {
     const degreeColor = themeMode === 'light' ? 'text-blue-600' : 'text-blue-400'; // Darker blue for light theme
 
     return (
-        <div className='ms-10 mt-2'>
+        <div className='ms-10 mt-2 text-lg font-vt323'>
             <p>My Education:</p>
             <div className="flex flex-col space-y-4 mt-2">
                 {educationDetails.map((edu, index) => (

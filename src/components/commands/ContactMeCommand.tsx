@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactMeCommand: React.FC = () => {
     return (
-        <div className="mt-2 me-96 ms-10">
+        <div className="mt-2 me-96 ms-10 text-lg font-vt323">
             <p>you can reach me at:</p>
             <ul className="list-none pl-5">
                 <li>

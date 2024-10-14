@@ -7,7 +7,7 @@ const AboutCommand: React.FC = () => {
 
     const textColor = themeMode === 'light' ? 'text-black' : 'text-gray-400';
     return (
-        <div className="ms-5">
+        <div className="ms-5 text-lg font-vt323">
             <p className={`mt-2 w-1/2 me-96 ms-10 ${textColor}`}>
                 Hey there! I’m Subhradip, a successful code copier who spends more time
                 Googling “how to fix my code” than actually coding. I juggle React, and

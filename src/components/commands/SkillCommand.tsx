@@ -23,14 +23,14 @@ const SkillCommand: React.FC = () => {
         { name: 'MongoDB' },
     ];
     return (
-        <div className="ms-10 mt-2">
+        <div className="ms-10 mt-2 text-lg font-vt323">
             <p className='mt-2'>my skills:</p>
             <div className="flex w-1/2">
 
                 <div className="w-1/3">
                     {skills.map((skill, index) => (
                         <div key={index} className="ms-5 mt-2">
-                            <span className="text-green-500">{skill.name}</span>
+                            <span className="">{skill.name}</span>
                         </div>
                     ))}
                 </div>
@@ -38,7 +38,7 @@ const SkillCommand: React.FC = () => {
                 <div className="w-1/3">
                     {skills2.map((skill, index) => (
                         <div key={index} className="ms-5 mt-2">
-                            <span className="text-green-500">{skill.name}</span>
+                            <span className="">{skill.name}</span>
                         </div>
                     ))}
                 </div>
@@ -46,7 +46,7 @@ const SkillCommand: React.FC = () => {
                 <div className="w-1/3">
                     {skills3.map((skill, index) => (
                         <div key={index} className="ms-5 mt-2">
-                            <span className="text-green-500">{skill.name}</span>
+                            <span className="">{skill.name}</span>
                         </div>
                     ))}
                 </div>

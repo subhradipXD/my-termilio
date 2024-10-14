@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header: React.FC = () => {
     return (
-        <div className="ms-5  text-sm leading-tight whitespace-pre">
+        <div className="ms-5 leading-tight whitespace-pre">
             <pre>
                 {/* {`
 ██╗  ██╗███████╗██╗   ██╗     █████╗ ██╗     ██╗███████╗███╗   ██╗
@@ -23,9 +23,9 @@ const Header: React.FC = () => {
             </pre>
             <pre>
             </pre>
-            <pre>Welcome to my terminal portfolio. (version 2.3.1)</pre>
+            <pre className='text-lg font-vt323'>Welcome to my terminal portfolio. (version 2.3.1)</pre>
             <pre>-----</pre>
-            <pre className=" text-sm">
+            <pre className=" text-lg font-vt323">
                 for list of commands enter help/hlp.
             </pre>
             <pre>-----</pre>
