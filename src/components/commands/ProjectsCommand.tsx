@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import { useTheme } from '../../context/ThemeContext'; // Make sure to import the hook
 
 const ProjectsCommand: React.FC = () => {
@@ -58,12 +60,37 @@ const ProjectsCommand: React.FC = () => {
     const repoColor = themeMode === 'light' ? 'text-blue-600' : 'text-blue-400'; // Darker blue for light theme
     const descriptionColor = themeMode === 'light' ? 'text-gray-800' : 'text-white'; // Darker gray for light theme
 
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [renderedProjects, setRenderedProjects] = useState<typeof projects>([]);
+
+    useEffect(() => {
+        if (currentIndex < projects.length) {
+            const timer = setTimeout(() => {
+                setRenderedProjects((prev) => [...prev, projects[currentIndex]]);
+                setCurrentIndex((prev) => prev + 1);
+            }, 300); // Delay between each project block appearing
+
+            return () => clearTimeout(timer); // Cleanup the timer
+        }
+    }, [currentIndex, projects]);
+
     return (
-        <div className='mt-2 ms-10 w-1/2 text-lg font-vt323'>
+        <motion.div
+            className='mt-2 ms-10 w-1/2 text-lg font-vt323'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+        >
             <p>Here are some of my projects:</p>
             <div className="flex flex-col space-y-4 mt-2 ms-5">
-                {projects.map((project, index) => (
-                    <div key={index} className="flex flex-col">
+                {renderedProjects.map((project, index) => (
+                    <motion.div
+                        key={index}
+                        className="flex flex-col"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                    >
                         <div className="flex">
                             <span className={`font-bold ${nameColor}`}>{project.name}:</span>
                             <a
@@ -76,10 +103,10 @@ const ProjectsCommand: React.FC = () => {
                             </a>
                         </div>
                         <p className={descriptionColor}>{project.description}</p>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

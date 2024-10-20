@@ -23,7 +23,7 @@ const Header: React.FC = () => {
             </pre>
             <pre>
             </pre>
-            <pre className='text-lg font-vt323'>Welcome to my terminal portfolio. (version 2.3.1)</pre>
+            <pre className='text-lg font-vt323'>Welcome to my terminal portfolio. (version 2.5.3)</pre>
             <pre>-----</pre>
             <pre className=" text-lg font-vt323">
                 for list of commands enter help/hlp.
