@@ -38,7 +38,7 @@ const GUICommand: React.FC = () => {
                 {displayedText} {/* Display the typewriter effect */}
                 {isLinkVisible && ( // Show link after the first part finishes typing
                     <a
-                        href="https://portfolio-lilac-one-87.vercel.app/"
+                        href="https://my-nextfolio.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`underline ms-2 ${guiColor}`}
