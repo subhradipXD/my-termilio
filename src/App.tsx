@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './header/header';
+// import Header from './header/header';
 import Terminal from './components/Terminal';
 import PreLoader from './components/PreLoader';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
@@ -48,7 +48,6 @@ const MainContent: React.FC<{ isMobile: boolean; isLoading: boolean; }> = ({ isM
   } else {
     return (
       <div className={`font-vt323 text-lg text-green-700 ${themeMode}`}>
-        <Header />
         <Terminal />
       </div>
     );

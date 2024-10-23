@@ -10,6 +10,7 @@ import PWDCommand from './commands/PWDCommand';
 import SkillCommand from './commands/SkillCommand';
 import ThemesCommand from './commands/ThemeCommand';
 import { useTheme } from '../context/ThemeContext';
+import Header from '../header/header';
 
 interface Command {
     command: string;
@@ -128,36 +129,35 @@ const Terminal: React.FC = () => {
     };
 
     return (
-        <div className="h-screen p-4 text-lg font-vt323">
-            <div className="overflow-auto mb-4">
-                {output.map((entry, index) => (
-                    <div key={index} className="mb-2">
-                        <p>
-                            <span className="pr-2 text-orange-600 text-lg font-vt323">visitor@terminal.subhradipXD:~$</span>
-                            <span className='text-yellow-500'>{entry.command}</span>
-                        </p>
-                        {entry.output}
-                    </div>
-                ))}
+        <>
+            <Header />
+            <div className="h-screen p-4 text-lg font-vt323">
+                <div className="overflow-auto mb-4">
+                    {output.map((entry, index) => (
+                        <div key={index} className="mb-2">
+                            <p>
+                                <span className="pr-2 text-orange-600 text-lg font-vt323">visitor@terminal.subhradipXD:~$</span>
+                                <span className='text-yellow-500'>{entry.command}</span>
+                            </p>
+                            {entry.output}
+                        </div>
+                    ))}
+                </div>
+                <div className="flex items-center text-lg font-vt323">
+                    <span className="pr-2 text-orange-600 text-lg font-vt323">visitor@terminal.subhradipXD:~$</span>
+                    <input
+                        type="text"
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        onKeyDown={handleKeyDown}
+                        className="focus:outline-none flex-grow bg-transparent text-lg font-vt323 text-yellow-500"
+                        autoFocus
+                    />
+                </div>
             </div>
-            <div className="flex items-center text-lg font-vt323">
-                <span className="pr-2 text-orange-600 text-lg font-vt323">visitor@terminal.subhradipXD:~$</span>
-                <input
-                    type="text"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    onKeyDown={handleKeyDown}
-                    className="focus:outline-none flex-grow bg-transparent text-lg font-vt323 text-yellow-500"
-                    autoFocus
-                />
-            </div>
-        </div>
-
+        </>
 
     );
 };
 
 export default Terminal;
-
-
-
